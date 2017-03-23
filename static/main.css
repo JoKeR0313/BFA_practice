@@ -3,3 +3,8 @@ body {
     background-repeat: repeat-x;
     background-color: #d9e0f2
 }
+
+form a {
+    margin: 10px
+
+}
