@@ -6,7 +6,13 @@ app = Flask(__name__)
 app.secret_key = 'development key'
 
 
-@app.route("/")
+class Address:
+
+    def __init__(self, address, ):
+        pass
+
+
+@app.route("/", methods=["GET", "POST"])
 def home():
     return render_template("index.html")
 
