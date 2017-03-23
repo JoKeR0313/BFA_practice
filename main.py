@@ -1,4 +1,5 @@
 from flask import *
+import json
 
 
 app = Flask(__name__)
@@ -30,7 +31,9 @@ def home():
         address1 = Address(country, address, zip_code)
         address1.log_address()
         address1.check_budapest()
-    return render_template("index.html")
+        return json.dumps({"success": zip_code})
+    else:
+        return render_template("index.html")
 
 
 if __name__ == "__main__":
